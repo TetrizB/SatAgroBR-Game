@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Satellite } from 'lucide-react';
+import Image from 'next/image';
 
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
         <Link href="/" className="flex items-center space-x-2 mr-6">
-          <Satellite className="h-6 w-6 text-primary" />
+          <Image src="https://i.postimg.cc/0jcGnNT3/Design-sem-nome-52.png" alt="SatAgroBr logo" width={32} height={32} />
           <span className="font-bold font-headline sm:inline-block">
             SatAgroBr
           </span>
