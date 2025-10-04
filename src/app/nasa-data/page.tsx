@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Satellite, Droplets, Leaf, BarChart3 } from 'lucide-react';
+import { Satellite, Droplets, Leaf, CloudDrizzle } from 'lucide-react';
 
 const nasaDataInfo = [
   {
@@ -18,9 +18,9 @@ const nasaDataInfo = [
     description: 'O NDVI é uma métrica calculada a partir de imagens de satélite que indica a saúde e a densidade da vegetação. Valores altos de NDVI sugerem uma vegetação mais saudável e densa, permitindo a identificação precoce de problemas na lavoura.',
   },
   {
-    icon: <BarChart3 className="w-8 h-8 text-accent" />,
-    title: 'Dados de Precipitação (GPM)',
-    description: 'A missão GPM (Global Precipitation Measurement) monitora a chuva e a neve em todo o mundo. Esses dados são vitais para prever safras, gerenciar recursos hídricos e se preparar para eventos climáticos extremos, como secas e inundações.',
+    icon: <CloudDrizzle className="w-8 h-8 text-accent" />,
+    title: 'Evapotranspiração (ECOSTRESS)',
+    description: 'O sensor ECOSTRESS da NASA, a bordo da Estação Espacial Internacional, mede a temperatura da superfície terrestre. Isso nos ajuda a calcular a evapotranspiração – a transpiração das plantas e a evaporação do solo – que é um indicador vital do estresse hídrico.',
   },
 ];
 
