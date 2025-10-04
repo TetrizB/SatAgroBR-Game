@@ -8,9 +8,7 @@ export function Header() {
       <div className="container flex h-14 items-center">
         <Link href="/" className="flex items-center space-x-2 mr-6">
           <Image src="https://i.postimg.cc/0jcGnNT3/Design-sem-nome-52.png" alt="SatAgroBr logo" width={32} height={32} />
-          <span className="font-bold font-headline sm:inline-block">
-            SatAgroBr
-          </span>
+          <Image src="https://i.postimg.cc/wBgPTwXj/2.png" alt="SatAgroBr" width={100} height={20} />
         </Link>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
           <Link href="/game" className="transition-colors hover:text-primary">
