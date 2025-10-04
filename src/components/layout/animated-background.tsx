@@ -41,7 +41,7 @@ export function AnimatedBackground({ children }: { children: React.ReactNode }) 
   return (
     <div className="relative w-full overflow-hidden">
        <Image
-          src="https://i.postimg.cc/vHHqx4k5/Chat-GPT-Image-4-de-out-de-2025-13-45-36.png"
+          src="https://i.postimg.cc/N0h4gDX0/Chat-GPT-Image-4-de-out-de-2025-14-45-10.png"
           alt="Abstract background"
           fill
           className="absolute inset-0 -z-10 h-full w-full object-cover"
