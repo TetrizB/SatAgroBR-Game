@@ -48,6 +48,21 @@ const smapShows = [
     }
 ]
 
+const ecostressShows = [
+    {
+        icon: <div className="text-primary">🌡️</div>,
+        text: "A planta está superaquecendo"
+    },
+    {
+        icon: <Droplets className="w-5 h-5 text-primary opacity-70" />,
+        text: "O solo não está absorvendo água o suficiente"
+    },
+    {
+        icon: <BarChart className="w-5 h-5 text-primary -rotate-45" />,
+        text: "O rendimento da lavoura vai cair se nada for feito"
+    }
+];
+
 
 export default function NasaDataPage() {
   return (
@@ -194,10 +209,47 @@ export default function NasaDataPage() {
                         </div>
                     </CardContent>
                 </Card>
+
+                <Card className="bg-card/50 border-border/50 shadow-lg">
+                    <CardHeader>
+                        <div className="flex items-center gap-4">
+                            <div className="bg-primary/10 p-3 rounded-full">
+                                <Leaf className="w-8 h-8 text-primary" />
+                            </div>
+                            <div>
+                                <CardTitle className="font-headline text-2xl text-foreground">ECOSTRESS</CardTitle>
+                                <CardDescription>Ecosystem Spaceborne Thermal Radiometer Experiment on Space Station</CardDescription>
+                            </div>
+                        </div>
+                    </CardHeader>
+                    <CardContent className="space-y-6">
+                        <p className="text-muted-foreground">
+                           O ECOSTRESS fica instalado na <strong>Estação Espacial Internacional (ISS)</strong> e mede a <strong>temperatura das plantas</strong>, detectando quando elas estão sob <i>estresse hídrico</i> — mesmo antes de apresentarem sinais visíveis. Isso significa que ele pode avisar quando:
+                        </p>
+                        <ul className="space-y-2 list-inside text-muted-foreground">
+                            {ecostressShows.map(item => (
+                                <li key={item.text} className="flex items-center gap-3">
+                                    {item.icon}
+                                    <span>{item.text}</span>
+                                </li>
+                            ))}
+                        </ul>
+                        <div className="p-4 bg-background/50 rounded-lg">
+                           <h4 className="font-semibold text-foreground flex items-center gap-2 mb-2"><BarChart className="w-5 h-5 text-accent"/>Aplicação real:</h4>
+                           <p className="text-muted-foreground">Pesquisadores no México e na Califórnia já usam o ECOSTRESS para <strong>prever estresse nas plantações de milho e algodão com até 7 dias de antecedência</strong>, ajustando a irrigação para evitar perdas.</p>
+                        </div>
+                        <div>
+                           <h4 className="font-semibold text-foreground flex items-center gap-2 mb-2"><Package className="w-5 h-5 text-accent"/>Onde acessar:</h4>
+                           <ul className="space-y-2">
+                                <li><a href="https://glam.nasaharvest.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline flex items-center gap-2"><LinkIcon className="w-4 h-4"/>GLOBAL AGRICULTURE MONITORING SYSTEM</a></li>
+                                <li><a href="https://worldview.earthdata.nasa.gov/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline flex items-center gap-2"><LinkIcon className="w-4 h-4"/>NASA Worldview</a></li>
+                           </ul>
+                        </div>
+                    </CardContent>
+                </Card>
+
             </div>
         </div>
     </div>
   );
 }
-
-    
