@@ -44,7 +44,7 @@ export function AnimatedBackground({ children }: { children: React.ReactNode }) 
           src="https://i.postimg.cc/vHHqx4k5/Chat-GPT-Image-4-de-out-de-2025-13-45-36.png"
           alt="Abstract background"
           fill
-          className="absolute inset-0 -z-10 h-full w-full object-cover"
+          className="absolute inset-0 -z-10 h-full w-full"
         />
       <Sparkles />
       <div className="relative z-10">
