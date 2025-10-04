@@ -3,7 +3,6 @@ import './globals.css';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster";
-import { AnimatedBackground } from '@/components/layout/animated-background';
 
 export const metadata: Metadata = {
   title: 'SatAgroBr: NASA Data Game',
@@ -25,8 +24,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-body antialiased">
-        <AnimatedBackground>
+      <body className="font-body antialiased bg-background">
           <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-grow">
@@ -34,7 +32,6 @@ export default function RootLayout({
             </main>
             <Footer />
           </div>
-        </AnimatedBackground>
         <Toaster />
       </body>
     </html>

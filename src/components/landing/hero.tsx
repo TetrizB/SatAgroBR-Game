@@ -1,10 +1,12 @@
 import { Button } from '@/components/ui/button';
+import { AnimatedBackground } from '@/components/layout/animated-background';
 import Link from 'next/link';
 
 export function Hero() {
   return (
-    <section className="relative py-20 sm:py-32">
-        <div className="container mx-auto px-4 z-10 relative">
+    <section className="relative">
+      <AnimatedBackground>
+        <div className="container mx-auto px-4 z-10 relative py-20 sm:py-32">
             <div className="max-w-3xl mx-auto text-center">
                 <h1 className="text-4xl sm:text-6xl lg:text-7xl font-headline font-bold mb-6 tracking-wide text-white">
                     SatAgroBr: The Future of Farming
@@ -22,6 +24,7 @@ export function Hero() {
                 </div>
             </div>
         </div>
+      </AnimatedBackground>
     </section>
   );
 }
