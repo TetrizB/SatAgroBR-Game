@@ -226,15 +226,16 @@ export default function NasaDataPage() {
                         </div>
                     </CardContent>
                 </Card>
-
-                <Image 
-                    src="https://i.postimg.cc/7h6RF5wp/SATELITES-SCIENCE-FLEET.jpg" 
-                    alt="Frota de satélites da NASA"
-                    width={1200}
-                    height={675}
-                    className="rounded-lg shadow-xl w-full h-auto object-cover"
-                />
-
+                <div>
+                    <Image 
+                        src="https://i.postimg.cc/7h6RF5wp/SATELITES-SCIENCE-FLEET.jpg" 
+                        alt="Frota de satélites da NASA"
+                        width={1200}
+                        height={675}
+                        className="rounded-lg shadow-xl w-full h-auto object-cover"
+                    />
+                    <p className="text-center text-sm text-muted-foreground mt-2">Essa imagem representa a frota de satélites de observação da Terra da NASA.</p>
+                </div>
 
                  <div className="text-center max-w-3xl mx-auto py-8">
                     <h2 className="text-3xl sm:text-4xl font-headline font-bold mb-4 text-foreground">
