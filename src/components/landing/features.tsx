@@ -26,7 +26,7 @@ const features = [
 
 export function Features() {
   return (
-    <section id="features" className="py-20 sm:py-32 bg-background/80 backdrop-blur-sm">
+    <section id="features" className="py-20 sm:py-32">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-headline font-bold mb-4">Why SatAgroBr?</h2>
