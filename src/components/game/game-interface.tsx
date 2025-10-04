@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { DataVisualization } from './data-visualization';
 import { ProgressTracker } from './progress-tracker';
 
 const scenarios = [
@@ -113,7 +112,6 @@ export function GameInterface() {
             </div>
             <div className="space-y-8">
                 <ProgressTracker score={score} badges={badges} />
-                <DataVisualization />
             </div>
         </div>
     )
