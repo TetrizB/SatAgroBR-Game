@@ -38,14 +38,33 @@ const Sparkles = () => {
 
 
 export function AnimatedBackground({ children }: { children: React.ReactNode }) {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className="relative w-full overflow-hidden">
-       <Image
-          src="https://i.postimg.cc/N0h4gDX0/Chat-GPT-Image-4-de-out-de-2025-14-45-10.png"
-          alt="Abstract background"
-          fill
-          className="absolute inset-0 -z-10 h-full w-full object-cover"
-        />
+       <div
+          className="absolute inset-0 -z-10 h-full w-full"
+          style={{ transform: `translateY(${scrollY * 0.4}px)` }}
+        >
+          <Image
+            src="https://i.postimg.cc/N0h4gDX0/Chat-GPT-Image-4-de-out-de-2025-14-45-10.png"
+            alt="Abstract background"
+            fill
+            className="object-cover"
+            priority
+          />
+       </div>
       <Sparkles />
       <div className="relative z-10">
         {children}
