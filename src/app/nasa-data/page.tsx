@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Satellite, Droplets, Leaf, CloudDrizzle, Globe, KeyRound, Download, CheckCircle, Search, Calendar, MapPin, Lightbulb, Link as LinkIcon, BarChart, Package } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import Image from 'next/image';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
 const accessSteps = [
   {
@@ -60,6 +61,29 @@ const ecostressShows = [
     {
         icon: <BarChart className="w-5 h-5 text-primary -rotate-45" />,
         text: "O rendimento da lavoura vai cair se nada for feito"
+    }
+];
+
+const missions = [
+    {
+        dado: "Umidade do solo (visível do espaço)",
+        missao: "SMAP",
+        mostra: "Mostra se o solo está muito seco ou já está no ponto ideal pra regar ou plantar."
+    },
+    {
+        dado: "Estresse por calor nas plantas",
+        missao: "ECOSTRESS",
+        mostra: "Detecta quando as plantas estão superaquecendo — antes mesmo de murcharem. Assim, você evita queda de rendimento."
+    },
+    {
+        dado: "Cobertura vegetal e crescimento",
+        missao: "Landsat",
+        mostra: "Mostra se a lavoura está se desenvolvendo bem ou se sofreu com seca, pragas ou pisoteio."
+    },
+    {
+        dado: "Dados agrícolas e climáticos globais",
+        missao: "Harvest Portal (NASA)",
+        mostra: "Reúne dados sobre cultura, clima, produtividade e variação entre safras. Tudo em um só lugar."
     }
 ];
 
@@ -168,6 +192,52 @@ export default function NasaDataPage() {
 
                  <div className="text-center max-w-3xl mx-auto py-8">
                     <h2 className="text-3xl sm:text-4xl font-headline font-bold mb-4 text-foreground">
+                        Missões que você deve conhecer
+                    </h2>
+                    <p className="text-lg text-muted-foreground">
+                        Os satélites da NASA não estão apenas olhando para o espaço — eles também olham para a Terra, o campo e até a sua plantação. Essas missões foram criadas para entender o planeta em tempo real, e hoje são ferramentas poderosas para quem trabalha com agricultura.
+                    </p>
+                     <p className="text-lg text-muted-foreground mt-4">
+                        Abaixo estão algumas das principais missões que você pode usar (sim, de graça 👇):
+                    </p>
+                </div>
+
+                <Card className="bg-card/50 border-border/50 shadow-lg overflow-hidden">
+                    <CardContent className="p-0">
+                         <div className="overflow-x-auto">
+                            <Table>
+                                <TableHeader>
+                                    <TableRow>
+                                        <TableHead className="font-bold">🌍 Dado</TableHead>
+                                        <TableHead className="font-bold">🛰️ Satélite/Missão</TableHead>
+                                        <TableHead className="font-bold">🌾 O que ele te mostra no campo</TableHead>
+                                    </TableRow>
+                                </TableHeader>
+                                <TableBody>
+                                    {missions.map((mission) => (
+                                        <TableRow key={mission.missao}>
+                                            <TableCell className="font-medium">{mission.dado}</TableCell>
+                                            <TableCell>{mission.missao}</TableCell>
+                                            <TableCell>{mission.mostra}</TableCell>
+                                        </TableRow>
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </div>
+                    </CardContent>
+                </Card>
+
+                <Image 
+                    src="https://i.postimg.cc/7h6RF5wp/SATELITES-SCIENCE-FLEET.jpg" 
+                    alt="Frota de satélites da NASA"
+                    width={1200}
+                    height={675}
+                    className="rounded-lg shadow-xl w-full h-auto object-cover"
+                />
+
+
+                 <div className="text-center max-w-3xl mx-auto py-8">
+                    <h2 className="text-3xl sm:text-4xl font-headline font-bold mb-4 text-foreground">
                         Bem-vindo ao mundo dos dados práticos
                     </h2>
                     <p className="text-lg text-muted-foreground">
@@ -270,5 +340,3 @@ export default function NasaDataPage() {
     </div>
   );
 }
-
-    
