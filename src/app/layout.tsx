@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'SatAgroBr: NASA Data Game',
   description: 'Learn about sustainable agriculture through the application of NASA data.',
   icons: {
-    icon: '/favicon.ico',
+    icon: 'https://i.postimg.cc/G3yZKTmB/1.png',
   }
 };
 
