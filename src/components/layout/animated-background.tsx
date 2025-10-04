@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const Sparkles = () => {
   const [sparkles, setSparkles] = useState<any[]>([]);
@@ -39,7 +40,12 @@ const Sparkles = () => {
 export function AnimatedBackground({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative min-h-screen w-full bg-background">
-      <div className="absolute inset-0 -z-10 h-full w-full animated-gradient" />
+       <Image
+          src="https://i.postimg.cc/vHHqx4k5/Chat-GPT-Image-4-de-out-de-2025-13-45-36.png"
+          alt="Abstract background"
+          fill
+          className="absolute inset-0 -z-10 h-full w-full object-cover"
+        />
       <Sparkles />
       <div className="relative z-10">
         {children}
