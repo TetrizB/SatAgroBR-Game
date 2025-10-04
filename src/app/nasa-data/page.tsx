@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Satellite, Droplets, Leaf, CloudDrizzle, Globe, KeyRound, Download, CheckCircle, Search, Calendar, MapPin, Lightbulb, Link as LinkIcon, BarChart, Package } from 'lucide-react';
+import { Satellite, Droplets, Leaf, CloudDrizzle, Globe, KeyRound, Download, CheckCircle, Search, Calendar, MapPin, Lightbulb, Link as LinkIcon, BarChart, Package, Eye, TestTube2, TrendingUp } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import Image from 'next/image';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
@@ -237,6 +237,31 @@ export default function NasaDataPage() {
                     <p className="text-center text-sm text-muted-foreground mt-2">Essa imagem representa a frota de satélites de observação da Terra da NASA.</p>
                 </div>
 
+                <Card className="bg-card/50 border-border/50 shadow-lg">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-2xl text-foreground">Explicando de forma simples:</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                        <p className="text-muted-foreground">Esses satélites funcionam como <strong className="text-primary">olhos no céu</strong>, que enxergam o que o olho humano não vê — a umidade escondida no solo, o calor que a planta sente, e até as áreas da lavoura que estão ficando para trás.</p>
+                        <p className="text-muted-foreground">Com esses dados, você <strong className="text-primary">pode tomar decisões mais inteligentes</strong>:</p>
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                            <div className="flex flex-col items-center p-4 bg-background/50 rounded-lg">
+                                <Droplets className="w-7 h-7 mb-2 text-accent"/>
+                                <span className="font-semibold">Quando irrigar</span>
+                            </div>
+                            <div className="flex flex-col items-center p-4 bg-background/50 rounded-lg">
+                                <TestTube2 className="w-7 h-7 mb-2 text-accent"/>
+                                <span className="font-semibold">Onde adubar</span>
+                            </div>
+                            <div className="flex flex-col items-center p-4 bg-background/50 rounded-lg">
+                                <TrendingUp className="w-7 h-7 mb-2 text-accent"/>
+                                <span className="font-semibold">Prever o rendimento</span>
+                            </div>
+                        </div>
+                    </CardContent>
+                </Card>
+
+
                  <div className="text-center max-w-3xl mx-auto py-8">
                     <h2 className="text-3xl sm:text-4xl font-headline font-bold mb-4 text-foreground">
                         Bem-vindo ao mundo dos dados práticos
@@ -341,3 +366,5 @@ export default function NasaDataPage() {
     </div>
   );
 }
+
+    
