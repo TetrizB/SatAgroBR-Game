@@ -234,6 +234,23 @@ export default function NasaDataPage() {
                                 </li>
                             ))}
                         </ul>
+                         <Alert className="bg-accent/10 border-accent/30 text-accent-foreground">
+                            <Lightbulb className="h-5 w-5 text-accent" />
+                            <AlertTitle className="font-headline text-accent">Dica Prática</AlertTitle>
+                            <AlertDescription className="text-muted-foreground grid md:grid-cols-2 gap-6 items-center pt-2">
+                                <div className="space-y-2">
+                                    <p>Imagine que o ECOSTRESS detectou uma área da lavoura com 3°C acima do normal.</p>
+                                    <p>Essa área provavelmente <strong>está recebendo menos água ou sombra</strong> — e isso pode te economizar milhares de reais em insumos ao corrigir o problema cedo.</p>
+                                </div>
+                                <Image 
+                                    src="https://i.postimg.cc/RF06xdfB/dsa.png" 
+                                    alt="Mapa de calor de uma lavoura" 
+                                    width={400} 
+                                    height={225} 
+                                    className="rounded-lg shadow-md w-full h-auto object-cover"
+                                />
+                            </AlertDescription>
+                        </Alert>
                         <div className="p-4 bg-background/50 rounded-lg">
                            <h4 className="font-semibold text-foreground flex items-center gap-2 mb-2"><BarChart className="w-5 h-5 text-accent"/>Aplicação real:</h4>
                            <p className="text-muted-foreground">Pesquisadores no México e na Califórnia já usam o ECOSTRESS para <strong>prever estresse nas plantações de milho e algodão com até 7 dias de antecedência</strong>, ajustando a irrigação para evitar perdas.</p>
@@ -253,3 +270,5 @@ export default function NasaDataPage() {
     </div>
   );
 }
+
+    
