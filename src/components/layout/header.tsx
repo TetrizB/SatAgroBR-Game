@@ -17,6 +17,9 @@ export function Header() {
           <Link href="/tutorial" className="transition-colors text-foreground hover:text-primary">
             Tutorial
           </Link>
+          <Link href="/nasa-data" className="transition-colors text-foreground hover:text-primary">
+            Dados da NASA
+          </Link>
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
           <Button>

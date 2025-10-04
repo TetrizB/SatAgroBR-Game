@@ -21,6 +21,9 @@ export function Hero() {
                     <Button asChild size="lg" variant="secondary" className="bg-background/80 hover:bg-background text-foreground w-full sm:w-auto">
                         <Link href="/tutorial">Learn How</Link>
                     </Button>
+                    <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
+                        <Link href="/nasa-data">Explore os Dados da NASA</Link>
+                    </Button>
                 </div>
             </div>
         </div>
