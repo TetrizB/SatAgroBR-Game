@@ -1,16 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { GraduationCap, Gamepad2, BarChart3, Award } from "lucide-react";
+import { GraduationCap, BarChart3, Award } from "lucide-react";
 
 const features = [
   {
     icon: <GraduationCap className="w-8 h-8 text-accent" />,
     title: "Interactive Tutorial",
     description: "A step-by-step guide to get you started with our browser extension and its powerful features.",
-  },
-  {
-    icon: <Gamepad2 className="w-8 h-8 text-accent" />,
-    title: "Educational Game",
-    description: "Learn sustainable agriculture by playing a fun game that uses real-world NASA data scenarios.",
   },
   {
     icon: <BarChart3 className="w-8 h-8 text-accent" />,
@@ -34,7 +29,7 @@ export function Features() {
             We transform complex satellite data into an engaging and educational experience.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature) => (
             <Card key={feature.title} className="bg-card/50 border-border/50 shadow-lg hover:shadow-primary/20 hover:-translate-y-2 transition-all duration-300">
               <CardHeader className="flex flex-col items-center text-center gap-4">

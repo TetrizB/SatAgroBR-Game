@@ -15,9 +15,6 @@ export function Hero() {
                     Harness the power of NASA's satellite data to revolutionize your agricultural practices. Play, learn, and grow with SatAgroBr.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto">
-                        <Link href="/game">Play The Game</Link>
-                    </Button>
                     <Button asChild size="lg" variant="secondary" className="bg-background/80 hover:bg-background text-foreground w-full sm:w-auto">
                         <Link href="/tutorial">Learn How</Link>
                     </Button>
