@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Satellite, Droplets, Leaf, CloudDrizzle, Globe, KeyRound, Download, CheckCircle, Search, Calendar, MapPin, Lightbulb } from 'lucide-react';
+import { Satellite, Droplets, Leaf, CloudDrizzle, Globe, KeyRound, Download, CheckCircle, Search, Calendar, MapPin, Lightbulb, Link as LinkIcon, BarChart, Package } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import Image from 'next/image';
 
@@ -32,6 +32,22 @@ const dataUses = [
         text: "Variações sazonais que afetam o crescimento das plantas"
     }
 ]
+
+const smapShows = [
+    {
+        icon: <Droplets className="w-5 h-5 text-primary" />,
+        text: "Se o solo está seco demais e precisa de irrigação"
+    },
+    {
+        icon: <CloudDrizzle className="w-5 h-5 text-primary" />,
+        text: "Se está muito úmido, o que pode causar apodrecimento das raízes"
+    },
+    {
+        icon: <Globe className="w-5 h-5 text-primary" />,
+        text: "Ajudam a prever seca ou enchentes com dias de antecedência"
+    }
+]
+
 
 export default function NasaDataPage() {
   return (
@@ -134,8 +150,54 @@ export default function NasaDataPage() {
 
                     </CardContent>
                 </Card>
+
+                 <div className="text-center max-w-3xl mx-auto py-8">
+                    <h2 className="text-3xl sm:text-4xl font-headline font-bold mb-4 text-foreground">
+                        Bem-vindo ao mundo dos dados práticos
+                    </h2>
+                    <p className="text-lg text-muted-foreground">
+                       Agora que você sabe onde buscar, vamos ao que interessa: <strong>como usar isso na prática.</strong> A NASA possui diversas missões que observam a Terra. Duas delas são verdadeiros tesouros para a agricultura:
+                    </p>
+                </div>
+
+                <Card className="bg-card/50 border-border/50 shadow-lg">
+                    <CardHeader>
+                        <div className="flex items-center gap-4">
+                            <div className="bg-primary/10 p-3 rounded-full">
+                                <Globe className="w-8 h-8 text-primary" />
+                            </div>
+                            <CardTitle className="font-headline text-2xl text-foreground">SMAP (Soil Moisture Active Passive)</CardTitle>
+                        </div>
+                    </CardHeader>
+                    <CardContent className="space-y-6">
+                        <p className="text-muted-foreground">
+                           O SMAP é um satélite que mede <strong>a umidade dos primeiros 5 cm do solo</strong> em todo o planeta — e faz isso a cada 2 ou 3 dias. Esses dados mostram:
+                        </p>
+                        <ul className="space-y-2 list-inside text-muted-foreground">
+                             {smapShows.map(item => (
+                                <li key={item.text} className="flex items-center gap-3">
+                                    {item.icon}
+                                    <span>{item.text}</span>
+                                </li>
+                            ))}
+                        </ul>
+                        <div className="p-4 bg-background/50 rounded-lg">
+                           <h4 className="font-semibold text-foreground flex items-center gap-2 mb-2"><BarChart className="w-5 h-5 text-accent"/>Aplicação real:</h4>
+                           <p className="text-muted-foreground">Produtores podem reduzir o desperdício de água em até <strong>30%</strong> ajustando a irrigação conforme o nível de umidade detectado pelo SMAP. <em className="text-xs">(Fonte: NASA SMAP Applications Report, 2023)</em></p>
+                        </div>
+                        <div>
+                           <h4 className="font-semibold text-foreground flex items-center gap-2 mb-2"><Package className="w-5 h-5 text-accent"/>Onde acessar:</h4>
+                           <ul className="space-y-2">
+                                <li><a href="https://smap.jpl.nasa.gov/data/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline flex items-center gap-2"><LinkIcon className="w-4 h-4"/>SMAP Data Portal</a></li>
+                                <li><a href="https://search.earthdata.nasa.gov/search?q=SMAP" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline flex items-center gap-2"><LinkIcon className="w-4 h-4"/>NASA Earthdata Search - SMAP</a></li>
+                           </ul>
+                        </div>
+                    </CardContent>
+                </Card>
             </div>
         </div>
     </div>
   );
 }
+
+    
