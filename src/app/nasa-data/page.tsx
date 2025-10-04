@@ -118,7 +118,7 @@ export default function NasaDataPage() {
                             <AlertTitle className="font-headline flex items-center gap-2 text-foreground">💡 Dica SatAgroBr #1</AlertTitle>
                             <AlertDescription className="text-muted-foreground grid md:grid-cols-2 gap-4 items-center pt-2">
                                 <div>
-                                    Baixe o dado <strong className="text-primary">Soil Moisture</strong> (umidade do solo) do satélite <strong>SMAP</strong> e compare com as previsões de chuva da sua cidade. Você vai ver que o espaço acerta mais do que o noticiário 😎
+                                    Baixe o dado <strong className="text-primary">Soil Moisture</strong> (umidade do solo) do satélite <strong>SMAP</strong> e compare com as previsões de chuva da sua cidade. Você vai ver que o espaço acerta mais do que o noticiário.
                                 </div>
                                 <Image 
                                     src="https://i.postimg.cc/XYTnx8NC/smap-instrument-th.jpg" 
