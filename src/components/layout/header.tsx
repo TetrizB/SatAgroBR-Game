@@ -11,10 +11,10 @@ export function Header() {
           <Image src="https://i.postimg.cc/wBgPTwXj/2.png" alt="SatAgroBr" width={100} height={20} />
         </Link>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-          <Link href="/game" className="transition-colors hover:text-primary">
+          <Link href="/game" className="transition-colors text-foreground hover:text-primary">
             Game
           </Link>
-          <Link href="/tutorial" className="transition-colors hover:text-primary">
+          <Link href="/tutorial" className="transition-colors text-foreground hover:text-primary">
             Tutorial
           </Link>
         </nav>
