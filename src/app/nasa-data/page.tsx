@@ -241,23 +241,34 @@ export default function NasaDataPage() {
                     <CardHeader>
                         <CardTitle className="font-headline text-2xl text-foreground">Explicando de forma simples:</CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-4">
-                        <p className="text-muted-foreground">Esses satélites funcionam como <strong className="text-primary">olhos no céu</strong>, que enxergam o que o olho humano não vê — a umidade escondida no solo, o calor que a planta sente, e até as áreas da lavoura que estão ficando para trás.</p>
-                        <p className="text-muted-foreground">Com esses dados, você <strong className="text-primary">pode tomar decisões mais inteligentes</strong>:</p>
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-                            <div className="flex flex-col items-center p-4 bg-background/50 rounded-lg">
-                                <Droplets className="w-7 h-7 mb-2 text-accent"/>
-                                <span className="font-semibold">Quando irrigar</span>
-                            </div>
-                            <div className="flex flex-col items-center p-4 bg-background/50 rounded-lg">
-                                <TestTube2 className="w-7 h-7 mb-2 text-accent"/>
-                                <span className="font-semibold">Onde adubar</span>
-                            </div>
-                            <div className="flex flex-col items-center p-4 bg-background/50 rounded-lg">
-                                <TrendingUp className="w-7 h-7 mb-2 text-accent"/>
-                                <span className="font-semibold">Prever o rendimento</span>
-                            </div>
-                        </div>
+                    <CardContent>
+                      <div className="grid md:grid-cols-2 gap-6 items-center">
+                          <div className="space-y-4">
+                              <p className="text-muted-foreground">Esses satélites funcionam como <strong className="text-primary">olhos no céu</strong>, que enxergam o que o olho humano não vê — a umidade escondida no solo, o calor que a planta sente, e até as áreas da lavoura que estão ficando para trás.</p>
+                              <p className="text-muted-foreground">Com esses dados, você <strong className="text-primary">pode tomar decisões mais inteligentes</strong>:</p>
+                              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                                  <div className="flex flex-col items-center p-4 bg-background/50 rounded-lg">
+                                      <Droplets className="w-7 h-7 mb-2 text-accent"/>
+                                      <span className="font-semibold">Quando irrigar</span>
+                                  </div>
+                                  <div className="flex flex-col items-center p-4 bg-background/50 rounded-lg">
+                                      <TestTube2 className="w-7 h-7 mb-2 text-accent"/>
+                                      <span className="font-semibold">Onde adubar</span>
+                                  </div>
+                                  <div className="flex flex-col items-center p-4 bg-background/50 rounded-lg">
+                                      <TrendingUp className="w-7 h-7 mb-2 text-accent"/>
+                                      <span className="font-semibold">Prever o rendimento</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <Image 
+                              src="https://i.postimg.cc/Kj01YHXT/Chat-GPT-Image-4-de-out-de-2025-17-16-14.png"
+                              alt="Visão de satélite de uma fazenda"
+                              width={500}
+                              height={500}
+                              className="rounded-lg shadow-md w-full h-auto object-cover"
+                          />
+                      </div>
                     </CardContent>
                 </Card>
 
@@ -366,5 +377,7 @@ export default function NasaDataPage() {
     </div>
   );
 }
+
+    
 
     
