@@ -1,19 +1,19 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Satellite, Droplets, Leaf, CloudDrizzle, Globe, KeyRound, Download, CheckCircle, Search, Calendar, MapPin } from 'lucide-react';
+import { Satellite, Droplets, Leaf, CloudDrizzle, Globe, KeyRound, Download, CheckCircle, Search, Calendar, MapPin, Lightbulb } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import Image from 'next/image';
 
 const accessSteps = [
   {
-    icon: <MapPin className="w-5 h-5 text-accent" />,
+    icon: <MapPin className="w-5 h-5 text-primary" />,
     text: 'Buscar por Região (ex: “Cerrado”, “Vale do São Francisco”)'
   },
   {
-    icon: <Search className="w-5 h-5 text-accent" />,
+    icon: <Search className="w-5 h-5 text-primary" />,
     text: 'Filtrar por Tipo de dado (solo, temperatura, vegetação)'
   },
   {
-    icon: <Calendar className="w-5 h-5 text-accent" />,
+    icon: <Calendar className="w-5 h-5 text-primary" />,
     text: 'Selecionar o Período (ex: “últimos 30 dias”)'
   }
 ];
@@ -51,7 +51,7 @@ export default function NasaDataPage() {
                     <CardHeader>
                         <div className="flex items-center gap-4">
                             <div className="bg-primary/10 p-3 rounded-full">
-                                <Globe className="w-8 h-8 text-accent" />
+                                <Globe className="w-8 h-8 text-primary" />
                             </div>
                             <div>
                                 <CardTitle className="font-headline text-2xl text-foreground">1. Começando: Acesso & Conceitos Essenciais</CardTitle>
@@ -81,7 +81,7 @@ export default function NasaDataPage() {
                     <CardHeader>
                         <div className="flex items-center gap-4">
                             <div className="bg-primary/10 p-3 rounded-full">
-                                <KeyRound className="w-8 h-8 text-accent" />
+                                <KeyRound className="w-8 h-8 text-primary" />
                             </div>
                             <CardTitle className="font-headline text-2xl text-foreground">Como acessar os dados</CardTitle>
                         </div>
@@ -114,11 +114,13 @@ export default function NasaDataPage() {
                             ))}
                         </ul>
 
-                        <Alert className="bg-secondary/20 border-secondary/50">
-                            <AlertTitle className="font-headline flex items-center gap-2 text-foreground">💡 Dica SatAgroBr #1</AlertTitle>
-                            <AlertDescription className="text-muted-foreground grid md:grid-cols-2 gap-4 items-center pt-2">
-                                <div>
-                                    Baixe o dado <strong className="text-primary">Soil Moisture</strong> (umidade do solo) do satélite <strong>SMAP</strong> e compare com as previsões de chuva da sua cidade. Você vai ver que o espaço acerta mais do que o noticiário.
+                        <Alert className="bg-accent/10 border-accent/30 text-accent-foreground">
+                            <Lightbulb className="h-5 w-5 text-accent" />
+                            <AlertTitle className="font-headline text-accent">Dica SatAgroBr #1</AlertTitle>
+                            <AlertDescription className="text-muted-foreground grid md:grid-cols-2 gap-6 items-center pt-2">
+                                <div className="space-y-2">
+                                    <p>Baixe o dado <strong className="text-primary">Soil Moisture</strong> (umidade do solo) do satélite <strong>SMAP</strong> e compare com as previsões de chuva da sua cidade.</p>
+                                    <p>Você vai ver que o espaço acerta mais do que o noticiário.</p>
                                 </div>
                                 <Image 
                                     src="https://i.postimg.cc/XYTnx8NC/smap-instrument-th.jpg" 
