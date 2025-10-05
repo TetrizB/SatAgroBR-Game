@@ -29,7 +29,7 @@ const dataUses = [
         text: "Aumento da temperatura e estresse térmico nas lavouras"
     },
     {
-        icon: <Leaf className="w-5 h-5 text-primary" />,
+        icon: <Leaf className="w-5 h_5 text-primary" />,
         text: "Variações sazonais que afetam o crescimento das plantas"
     }
 ]
@@ -172,18 +172,11 @@ export default function NasaDataPage() {
                         <Alert className="bg-accent/10 border-accent/30 text-accent-foreground">
                             <Lightbulb className="h-5 w-5 text-accent" />
                             <AlertTitle className="font-headline text-accent">Dica SatAgroBr #1</AlertTitle>
-                            <AlertDescription className="text-muted-foreground grid md:grid-cols-2 gap-6 items-center pt-2">
+                            <AlertDescription className="text-muted-foreground grid md:grid-cols-1 gap-6 items-center pt-2">
                                 <div className="space-y-2">
                                     <p>Baixe o dado <strong className="text-primary">Soil Moisture</strong> (umidade do solo) do satélite <strong>SMAP</strong> e compare com as previsões de chuva da sua cidade.</p>
                                     <p>Você vai ver que o espaço acerta mais do que o noticiário.</p>
                                 </div>
-                                <Image 
-                                    src="https://i.postimg.cc/vHrZxGqJ/JOGO-SAT-AGROBR.png" 
-                                    alt="Satélite SMAP da NASA" 
-                                    width={400} 
-                                    height={225} 
-                                    className="rounded-lg shadow-md w-full h-auto object-cover"
-                                />
                             </AlertDescription>
                         </Alert>
 
@@ -381,6 +374,7 @@ export default function NasaDataPage() {
     
 
     
+
 
 
 
