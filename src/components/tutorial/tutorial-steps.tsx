@@ -62,9 +62,9 @@ export function TutorialSteps() {
                     <Image
                       src={imageUrl}
                       alt={step.title}
-                      width={800}
-                      height={600}
-                      className="rounded-lg shadow-md w-full h-auto object-cover"
+                      width={400}
+                      height={300}
+                      className="rounded-lg shadow-md w-full max-w-sm mx-auto h-auto object-cover"
                       data-ai-hint={image?.imageHint}
                     />
                   )}
