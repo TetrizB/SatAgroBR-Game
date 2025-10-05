@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Satellite, Droplets, Leaf, CloudDrizzle, Globe, KeyRound, Download, CheckCircle, Search, Calendar, MapPin, Lightbulb, Link as LinkIcon, BarChart, Package, Eye, TestTube2, TrendingUp } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
@@ -372,11 +373,3 @@ export default function NasaDataPage() {
 }
 
     
-
-    
-
-
-
-
-
-
