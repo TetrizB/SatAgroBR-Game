@@ -169,9 +169,9 @@ export default function NasaDataPage() {
                             ))}
                         </ul>
 
-                        <Alert className="bg-accent/10 border-accent/30 text-accent-foreground">
-                            <Lightbulb className="h-5 w-5 text-accent" />
-                            <AlertTitle className="font-headline text-accent">Dica SatAgroBr #1</AlertTitle>
+                        <Alert className="bg-secondary/20 border-secondary/50">
+                            <Lightbulb className="h-5 w-5 text-primary" />
+                            <AlertTitle className="font-headline text-primary">Dica SatAgroBr #1</AlertTitle>
                             <AlertDescription className="text-muted-foreground grid md:grid-cols-1 gap-6 items-center pt-2">
                                 <div className="space-y-2">
                                     <p>Baixe o dado <strong className="text-primary">Soil Moisture</strong> (umidade do solo) do satélite <strong>SMAP</strong> e compare com as previsões de chuva da sua cidade.</p>
@@ -374,6 +374,7 @@ export default function NasaDataPage() {
     
 
     
+
 
 
 
