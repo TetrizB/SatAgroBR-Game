@@ -19,8 +19,10 @@ export function Header() {
           </Link>
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
-          <Button>
-            Install Extension
+          <Button asChild>
+            <Link href="https://drive.google.com/drive/folders/1I_IOrOIPlbVy-n5UEjuIL53w-TtE_hsh?usp=sharing" target="_blank" rel="noopener noreferrer">
+              Install Extension
+            </Link>
           </Button>
         </div>
       </div>
