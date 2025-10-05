@@ -178,7 +178,7 @@ export default function NasaDataPage() {
                                     <p>Você vai ver que o espaço acerta mais do que o noticiário.</p>
                                 </div>
                                 <Image 
-                                    src="https://i.postimg.cc/XYTnx8NC/smap-instrument-th.jpg" 
+                                    src="https://i.postimg.cc/vHrZxGqJ/JOGO-SAT-AGROBR.png" 
                                     alt="Satélite SMAP da NASA" 
                                     width={400} 
                                     height={225} 
