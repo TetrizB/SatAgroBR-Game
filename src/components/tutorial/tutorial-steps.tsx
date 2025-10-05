@@ -20,6 +20,7 @@ const steps = [
     title: 'Start the Game',
     description: 'Click the extension icon in your browser to launch the SatAgroBr game. No account needed to start playing and learning.',
     imageId: 'tutorial-step-2',
+    newImageUrl: 'https://i.postimg.cc/TYshXtsT/JOGO-SAT-AGROBR-2.png'
   },
   {
     id: '3',
@@ -62,9 +63,9 @@ export function TutorialSteps() {
                     <Image
                       src={imageUrl}
                       alt={step.title}
-                      width={400}
-                      height={300}
-                      className="rounded-lg shadow-md w-full max-w-sm mx-auto h-auto object-cover"
+                      width={300}
+                      height={225}
+                      className="rounded-lg shadow-md w-full max-w-xs mx-auto h-auto object-cover"
                       data-ai-hint={image?.imageHint}
                     />
                   )}
