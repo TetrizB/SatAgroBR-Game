@@ -13,6 +13,7 @@ const steps = [
     title: 'Install the Browser Extension',
     description: 'Download and install the SatAgroBr extension from the Chrome Web Store. It\'s free and takes just a few seconds.',
     imageId: 'tutorial-step-1',
+    newImageUrl: 'https://i.postimg.cc/vHrZxGqJ/JOGO-SAT-AGROBR.png'
   },
   {
     id: '2',
@@ -41,6 +42,7 @@ export function TutorialSteps() {
       <Accordion type="single" collapsible defaultValue="item-1" className="w-full space-y-4">
         {steps.map((step) => {
           const image = images.find(p => p.id === step.imageId);
+          const imageUrl = (step as any).newImageUrl || image?.imageUrl;
           return (
             <AccordionItem key={step.id} value={`item-${step.id}`} className="bg-card/50 border-border/50 rounded-lg shadow-lg">
               <AccordionTrigger className="text-xl font-headline hover:no-underline px-6">
@@ -56,14 +58,14 @@ export function TutorialSteps() {
                   <p className="text-muted-foreground text-base">
                     {step.description}
                   </p>
-                  {image && (
+                  {imageUrl && (
                     <Image
-                      src={image.imageUrl}
+                      src={imageUrl}
                       alt={step.title}
                       width={800}
                       height={600}
                       className="rounded-lg shadow-md w-full h-auto object-cover"
-                      data-ai-hint={image.imageHint}
+                      data-ai-hint={image?.imageHint}
                     />
                   )}
                 </div>
