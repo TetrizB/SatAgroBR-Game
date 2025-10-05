@@ -19,7 +19,7 @@ export function Hero() {
                         <Link href="/tutorial">Learn How</Link>
                     </Button>
                     <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
-                        <Link href="/nasa-data">Explore os Dados da NASA</Link>
+                        <Link href="/nasa-data">Explore NASA Data</Link>
                     </Button>
                 </div>
             </div>
