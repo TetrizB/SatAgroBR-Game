@@ -20,7 +20,7 @@ const steps = [
     title: 'Start the Game',
     description: 'Click the extension icon in your browser to launch the SatAgroBr game. No account needed to start playing and learning.',
     imageId: 'tutorial-step-2',
-    newImageUrl: 'https://i.postimg.cc/TYshXtsT/JOGO-SAT-AGROBR-2.png'
+    newImageUrl: 'https://i.postimg.cc/GtGB7Gc9/JOGO-SAT-AGROBR.gif'
   },
   {
     id: '3',
@@ -33,6 +33,7 @@ const steps = [
     title: 'Track Your Progress and Learn',
     description: 'As you complete challenges, you\'ll earn points and badges. Each challenge teaches a new concept about sustainable agriculture and data analysis.',
     imageId: 'feature-progress',
+    newImageUrl: 'https://i.postimg.cc/nrBPDQ98/Chat-GPT-Image-4-de-out-de-2025-17-16-14.png'
   },
 ];
 
