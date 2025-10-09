@@ -256,7 +256,7 @@ export default function NasaDataPage() {
                               </div>
                           </div>
                           <Image 
-                              src="https://i.postimg.cc/Kj01YHXT/Chat-GPT-Image-4-de-out-de-2025-17-16-14.png"
+                              src="https://i.postimg.cc/nrBPDQ98/Chat-GPT-Image-4-de-out-de-2025-17-16-14.png"
                               alt="Satellite view of a farm"
                               width={500}
                               height={500}
