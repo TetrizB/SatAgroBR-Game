@@ -67,14 +67,14 @@ const ecostressShows = [
 
 const missions = [
     {
-        dado: "Soil Moisture (visible from space)",
+        dado: "Soil Moisture (from space)",
         missao: "SMAP",
         mostra: "Shows if the soil is too dry or at the ideal point for watering or planting."
     },
     {
         dado: "Plant Heat Stress",
         missao: "ECOSTRESS",
-        mostra: "Detects when plants are overheating—even before they wilt. This way, you avoid yield loss."
+        mostra: "Detects when plants are overheating—even before they wilt. This avoids yield loss."
     },
     {
         dado: "Vegetation Cover and Growth",
@@ -139,7 +139,7 @@ export default function NasaDataPage() {
                             <div className="bg-primary/10 p-3 rounded-full">
                                 <KeyRound className="w-8 h-8 text-primary" />
                             </div>
-                            <CardTitle className="font-headline text-2xl text-foreground">How to access the data</CardTitle>
+                            <CardTitle className="font-headline text-2xl text-foreground">How to Access the Data</CardTitle>
                         </div>
                     </CardHeader>
                     <CardContent className="space-y-6">
@@ -220,16 +220,6 @@ export default function NasaDataPage() {
                         </div>
                     </CardContent>
                 </Card>
-                <div>
-                    <Image 
-                        src="https://i.postimg.cc/7h6RF5wp/SATELITES-SCIENCE-FLEET.jpg" 
-                        alt="NASA's fleet of satellites"
-                        width={1200}
-                        height={675}
-                        className="rounded-lg shadow-xl w-full h-auto object-cover"
-                    />
-                    <p className="text-center text-sm text-muted-foreground mt-2">This image represents NASA's Earth observation satellite fleet.</p>
-                </div>
 
                 <Card className="bg-card/50 border-border/50 shadow-lg">
                     <CardHeader>
